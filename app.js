@@ -11,19 +11,19 @@ weatherApp.config(function ($routeProvider) {
   })
   .when('/forecast', {
     templateUrl: 'pages/forecast.html',
-    controller: 'forecastController'
+	  ervi
   })
 
 });
 
-// SERVICES
+// Services
 weatherApp.service('cityService', function() {
 
   this.city = "New York, NY";
 
 });
 
-// CONTROLLERS
+// Controllers
 weatherApp.controller('homeController', ['$scope', 'cityService', function($scope, cityService) {
 
   $scope.city = cityService.city;
