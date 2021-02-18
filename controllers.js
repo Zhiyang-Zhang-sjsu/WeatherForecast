@@ -16,7 +16,7 @@ weatherApp.controller('forecastController', ['$scope', '$resource', '$routeParam
     $scope.days = (parseInt($routeParams.days) * 8).toString();
   }
 
-  $scope.mykey = "665a8b912e13058b73842b1d97df7e84"
+  $scope.mykey = ""
   
   $scope.weatherAPI = $resource("http://api.openweathermap.org/data/2.5/forecast?");
   $scope.weatherResult = $scope.weatherAPI.get({q: $scope.city, cnt: $scope.days, appid: $scope.mykey});
